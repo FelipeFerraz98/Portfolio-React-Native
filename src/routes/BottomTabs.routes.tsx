@@ -2,6 +2,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Ionicons } from '@expo/vector-icons';
 import { HomeScreen } from '../screens/Home/HomeScreen';
+import { PortfolioScreen } from '../screens/Portfolio/PortfolioScreen';
 
 const { Screen, Navigator } = createBottomTabNavigator();
 
@@ -29,6 +30,16 @@ export function TabsRoutes() {
             headerShown: false,
             tabBarIcon: ({ color, size }) => (
               <Ionicons name="home" size={size} color={color} />
+            ),
+          }}
+        />
+        <Screen
+          name="Portfolio"
+          component={PortfolioScreen}
+          options={{
+            headerShown: false,
+            tabBarIcon: ({ color, size }) => (
+              <Ionicons name="images" size={size} color={color} />
             ),
           }}
         />

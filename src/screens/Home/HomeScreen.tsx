@@ -32,6 +32,7 @@ export function HomeScreen() {
         <TouchableOpacity style={styles.button} onPress={openLinkedIn}>
           <Ionicons
             name="logo-linkedin"
+            color="white"
             size={24}
             style={{ marginRight: 8 }}
           />
@@ -40,6 +41,7 @@ export function HomeScreen() {
         <TouchableOpacity style={styles.button} onPress={openGitHub}>
           <Ionicons
             name="logo-github"
+            color="white"
             size={24}
             style={{ marginRight: 8 }}
           />
