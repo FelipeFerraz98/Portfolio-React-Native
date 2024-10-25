@@ -1,29 +1,38 @@
-import { NavigationContainer } from '@react-navigation/native'
+import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { MaterialIcons } from '@expo/vector-icons';
-import { HomeScreen } from '../screens/Home/HomeScreen'
+import { Ionicons } from '@expo/vector-icons';
+import { HomeScreen } from '../screens/Home/HomeScreen';
 
-const { Screen, Navigator } = createBottomTabNavigator()
-
+const { Screen, Navigator } = createBottomTabNavigator();
 
 export function TabsRoutes() {
   return (
     <NavigationContainer>
-        <Navigator
+      <Navigator
         initialRouteName="Home"
-        >
-            <Screen
-                name='Home'
-                component={HomeScreen}
-                options={{
-                    headerShown: false,
-                    tabBarIcon: () => (
-                        <MaterialIcons name="home" size={24} color='#232323' />
-                      ),
-                }
-            }
-            />
-        </Navigator>
+        screenOptions={{
+          tabBarActiveTintColor: '#007BFF',
+          tabBarInactiveTintColor: '#fff',
+          tabBarStyle: { 
+            backgroundColor: '#3a3a3a',
+            borderTopWidth: 1.5,
+            borderColor: '#4a4a4a',         
+            elevation: 0,               // Remove a sombra no Android
+            shadowOpacity: 0,           // Remove a sombra no iOS
+          },
+        }}
+      >
+        <Screen
+          name="Home"
+          component={HomeScreen}
+          options={{
+            headerShown: false,
+            tabBarIcon: ({ color, size }) => (
+              <Ionicons name="home" size={size} color={color} />
+            ),
+          }}
+        />
+      </Navigator>
     </NavigationContainer>
-  )
+  );
 }

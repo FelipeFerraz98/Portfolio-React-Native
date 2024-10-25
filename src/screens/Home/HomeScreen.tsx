@@ -22,8 +22,10 @@ export function HomeScreen() {
         <Text style={[styles.title]}>
           Felipe Ferraz
         </Text>
+      </View>
+      <View>
         <Text style={[styles.subTitle]}>
-          Frontend Developer Mobile
+          Full Stack Developer Mobile and Web
         </Text>
       </View>
       <View style={styles.buttonContainer}>

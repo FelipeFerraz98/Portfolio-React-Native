@@ -5,22 +5,23 @@ export const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#232323',
+    backgroundColor: '#3a3a3a',
   },
   imageContainer: {
     overflow: 'hidden',
   },
   profileImage: {
     borderWidth: 2,
-    borderColor: '#fff',
-    width: 80,
-    height: 80
+    borderColor: '#007BFF',
+    width: 200,
+    height: 200
   },
   title: {
     fontSize: 30,
+    color: '#fff'
   },
   subTitle: {
-    color: '#232323',
+    color: '#fff',
     borderBottomWidth: 2,
     borderBottomColor: '#000'
   },
@@ -35,7 +36,8 @@ export const styles = StyleSheet.create({
     width: '80%',
     padding: 10,
     borderWidth: 1,
-    borderColor: '#fff',
+    borderColor: '#007BFF',
+    backgroundColor: '#007BFF',
     borderRadius: 5,
     marginHorizontal: 5,
     marginBottom: 15,
